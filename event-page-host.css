@@ -1,16 +1,16 @@
 .vertical-center {
-    /* margin: auto; */
+    display: flex;
+    align-items:center;
 }
 
 .full-width {
     width:100%;
 }
 
-.bottom-align {
-    bottom: 0px
-}
-
 .headshots {
     margin:auto;
-    width:90%;
+    width: 100%;
+}
+body {
+    background-color: #f7f7f7
 }

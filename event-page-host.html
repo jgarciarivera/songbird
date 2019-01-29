@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="event-page-host.css">
-    <script src = "event-page-host.js"></script>
+    <script src="event-page-host.js"></script>
 </head>
 
 <body>
@@ -21,44 +21,123 @@
         <div>Jazz</div>
 
         <div>
-            <p class="display-4 mt-4">Musicians</p>
+            <span class="display-4 mt-4">Musicians</span> <button type="button" class="vertical-center btn btn-primary"
+                data-toggle="modal" data-target="#join-session">
+                Join
+            </button>
         </div>
 
         <div class="mt-4 row">
 
-            <div id = "card1" class="card m-1 col col-sm-3">
-                <div class = "card-body">
-                    <img class = "headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-                    <div class="card-title">Usman Siddiqui</div>
+            <div id="card1" class="card m-1 col col-sm-3">
+                <div class="card-body">
+                    <img class="d-flex justify-content-center headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                    <h4 class="card-title mt-1 ">Usman Siddiqui</h4>
                     <div class="card-text">Piano, Novice</div>
                 </div>
             </div>
-            <div class="card m-1 col col-sm-3">
-                    <img class = "headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-                    
-                    <div class="card-title text-center">Usman Siddiqui</div> <br>
-                    <div class="">Piano, Novice</div>
+            <div id="card1" class="card m-1 col col-sm-3">
+                <div class="card-body">
+                    <img class="d-flex justify-content-center headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                    <h4 class="card-title mt-1 ">Usman Siddiqui</h4>
+                    <div class="card-text">Piano, Novice</div>
+                </div>
             </div>
-            <div class="card m-1 col col-sm-3">
-                    <img class = "headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-                    
-                    <div class="card-title text-center">Usman Siddiqui</div> <br>
-                    <div class="">Piano, Novice</div>
+            <div id="card1" class="card m-1 col col-sm-3">
+                <div class="card-body">
+                    <img class="d-flex justify-content-center headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                    <h4 class="card-title mt-1 ">Usman Siddiqui</h4>
+                    <div class="card-text">Piano, Novice</div>
+                </div>
             </div>
-            <div class="card m-1 col col-sm-3">
-                    <img class = "headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-                    
-                    <div class="card-title text-center">Usman Siddiqui</div> <br>
-                    <div class="">Piano, Novice</div>
+            <div id="card1" class="card m-1 col col-sm-3">
+                <div class="card-body">
+                    <img class="d-flex justify-content-center headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                    <h4 class="card-title mt-1 ">Usman Siddiqui</h4>
+                    <div class="card-text">Piano, Novice</div>
+                </div>
             </div>
-
+            <div id="join-card" class="card m-1 col col-sm-3">
+                <div class="card-body">
+                    <button type="button" class="d-flex justify-content-center headshots btn btn-primary" data-toggle="modal"
+                        data-target="#join-session">
+                        Join
+                    </button>
+                </div>
+            </div>
+            <div class="modal fade" id="join-session" tabindex="-1" role="dialog" aria-labelledby="join-sessionTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-title">Join this session!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" action=#>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="name">Name:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="instrument">Instrument:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="instrument" placeholder="Enter your instrument">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="expertise">Expertise:</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="expertise"
+                                                value="expert">
+                                            <label class="form-check-label" for="expert-radio">
+                                                Expert
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="expertise"
+                                                value="intermediate">
+                                            <label class="form-check-label" for="inter-radio">
+                                                Intermediate
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="expertise"
+                                                value="novice">
+                                            <label class="form-check-label" for="novice-radio">
+                                                Novice
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="expertise"
+                                                value="none" checked>
+                                            <label class="form-check-label" for="none-radio">
+                                                None
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div>
+        <div class="mt-4 row">
             <img style=height:40%;width:40% src="https://i0.wp.com/tribulant.com/blog/wp-content/uploads/2018/03/g1.png?w=426&ssl=1"
                 class="col col-sm-6 rounded float-left" />
         </div>
-        <div>
+        <div class="mt-4 row">
             <p class="display-4 mt-4">Comments</p>
         </div>
         <div class="row">
