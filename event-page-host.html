@@ -9,7 +9,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="event-page-host.css">
-    <script src="event-page-host.js"></script>
 </head>
 
 <body>
@@ -31,6 +30,28 @@
 
             <div id="card1" class="card m-1 col col-sm-3">
                 <div class="card-body">
+                    <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                    <div class="card-title">Usman Siddiqui</div>
+                    <div class="card-text">Piano, Novice</div>
+                </div>
+            </div>
+            <div class="card m-1 col col-sm-3">
+                <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+
+                <div class="card-title text-center">Usman Siddiqui</div> <br>
+                <div class="">Piano, Novice</div>
+            </div>
+            <div class="card m-1 col col-sm-3">
+                <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+
+                <div class="card-title text-center">Usman Siddiqui</div> <br>
+                <div class="">Piano, Novice</div>
+            </div>
+            <div class="card m-1 col col-sm-3">
+                <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+
+                <div class="card-title text-center">Usman Siddiqui</div> <br>
+                <div class="">Piano, Novice</div>
                     <img class="d-flex justify-content-center headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
                     <h4 class="card-title mt-1 ">Usman Siddiqui</h4>
                     <div class="card-text">Piano, Novice</div>
@@ -140,20 +161,22 @@
         <div class="mt-4 row">
             <p class="display-4 mt-4">Comments</p>
         </div>
-        <div class="row">
+        <div id="comment-section" class="row">
             <div class="col-sm-8">
-                <input type="text" class="full-width" placeholder="Enter your comment here..."></input>
+                <input type="text" id="input-text" class="full-width" placeholder="Enter your comment here..."></input>
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-light">Cancel</button>
+                <button id="clear-comment" class="btn btn-light">Clear</button>
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-primary">Submit</button>
+                <button id="submit-comment" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
     </div>
 
 </body>
+
+<script src="event-page-host.js"></script>
 
 </html>
