@@ -1,20 +1,140 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<body>
+  <div class="jumbotron text-center display-1"><a href="home.html">Songbird</a></div>
 
+  <div class="container">
+      <div class="display-3">Session Name</div>
+      <div class="">2:30pm - 4:30pm.</div>
+      <div>2811 McKinney Ave., Dallas, TX</div>
+      <div>Jazz</div>
+
+      <div>
+          <span class="display-4 mt-4">Musicians</span> 
+          <span class="ml-5 display-4">
+          <button type="button" class=" display-4 btn btn-primary" data-toggle="modal" data-target="#join-session">
+              Join
+          </button>
+          </span>
+      </div>
+
+      <div class="modal fade" id="join-session" tabindex="-1" role="dialog" aria-labelledby="join-sessionTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modal-title">Join this session!</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form class="form-horizontal" action=#>
+                          <div class="form-group">
+                              <label class="control-label col-sm-2" for="name">Name:</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="name" placeholder="Enter your name"/>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label col-sm-2" for="instrument">Instrument:</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="instrument" placeholder="Enter your instrument"/>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label col-sm-2" for="expertise">Expertise:</label>
+                              <div class="col-sm-10">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="expertiseLevel" id="expert"
+                                          value="Expert"/>
+                                      <label class="form-check-label" for="expert-radio">
+                                          Expert
+                                      </label>
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="expertiseLevel" id="intermediate"
+                                          value="Intermediate"/>
+                                      <label class="form-check-label" for="inter-radio">
+                                          Intermediate
+                                      </label>
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="expertiseLevel" id="novice"
+                                          value="Novice"/>
+                                      <label class="form-check-label" for="novice-radio">
+                                          Novice
+                                      </label>
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="expertiseLevel" id="none"
+                                          value="None" checked/>
+                                      <label class="form-check-label" for="none-radio">
+                                          None
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-dismiss = "modal" id='join-btn' onclick="addMusician()">Join
+                          Session</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="mt-4 row">
+
+          <div id="card1" class="card m-1 col col-sm-3">
+              <div class="card-body">
+                  <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                  <div class="card-title">Usman Siddiqui</div>
+                  <div class="card-text">Piano, Novice</div>
+              </div>
+          </div>
+          <div id="card2" class="card m-1 col col-sm-3">
+              <div class="card-body">
+                  <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                  <div class="card-title">Usman Siddiqui</div>
+                  <div class="card-text">Piano, Novice</div>
+              </div>
+          </div>
+          <div id="card3" class="card m-1 col col-sm-3">
+              <div class="card-body">
+                  <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                  <div class="card-title">Usman Siddiqui</div>
+                  <div class="card-text">Piano, Novice</div>
+              </div>
+          </div>
+          <div id='join-div'>
+              ...
+          </div>
+
+
+      </div>
+
+      <div class="mt-4 row">
+          <img style=height:40%;width:40% src="https://i0.wp.com/tribulant.com/blog/wp-content/uploads/2018/03/g1.png?w=426&ssl=1"
+              class="col col-sm-6 rounded float-left" />
+      </div>
+      <div class="mt-4 row">
+          <p class="display-4 mt-4">Comments</p>
+      </div>
+
+      <div id="comment-section" class="row">
+          <div class="col-sm-8">
+              <input type="text" id="input-text" class="full-width" placeholder="Enter your comment here..."/>
+          </div>
+          <div class="col-sm-2">
+              <button id="clear-comment" class="btn btn-light">Clear</button>
+          </div>
+          <div class="col-sm-2">
+              <button id="submit-comment" class="btn btn-primary">Submit</button>
+          </div>
+      </div>
+  </div>
+
+
+</body>

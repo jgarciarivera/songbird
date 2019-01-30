@@ -1,0 +1,31 @@
+.vertical-center {
+    display: flex;
+    align-items:center;
+}
+
+.full-width {
+    width:100%;
+}
+
+.headshots {
+    margin:auto;
+    width: 100%;
+}
+body {
+    background-color:#f7f7f7;
+}
+
+i {
+    margin:auto;
+    width:auto;
+    height:auto;
+}
+
+button.join-card {
+    margin:auto;
+    width:100%;
+}
+
+a.jumbotron {
+    color: black;
+}
