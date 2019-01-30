@@ -6,5 +6,9 @@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'songbird-ng';
+  modalVisible: boolean = false;
+
+  toggleVisible () {
+    this.modalVisible = !this.modalVisible;
+  }
 }

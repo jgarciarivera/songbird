@@ -11,19 +11,19 @@
       <div>
           <span class="display-4 mt-4">Musicians</span> 
           <span class="ml-5 display-4">
-          <button type="button" class=" display-4 btn btn-primary" data-toggle="modal" data-target="#join-session">
+          <button (click) = "toggleVisible()" type="button" class=" display-4 btn btn-primary" data-toggle="modal" data-target="#join-session">
               Join
           </button>
           </span>
       </div>
 
-      <div class="modal fade" id="join-session" tabindex="-1" role="dialog" aria-labelledby="join-sessionTitle"
+      <div class="modal" [style.display]="modalVisible ? 'block' : 'none'" id="join-session" tabindex="-1" role="dialog" aria-labelledby="join-sessionTitle"
           aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                   <div class="modal-header">
                       <h5 class="modal-title" id="modal-title">Join this session!</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <button (click) = "toggleVisible()" type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
@@ -77,7 +77,7 @@
                       </form>
                   </div>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click) = "toggleVisible()">Close</button>
                       <button type="button" class="btn btn-primary" data-dismiss = "modal" id='join-btn' onclick="addMusician()">Join
                           Session</button>
                   </div>
