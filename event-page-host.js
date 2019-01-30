@@ -1,17 +1,17 @@
-var clearComment = document.getElementById("clear-comment");
-clearComment.addEventListener("click", function() {
-    document.getElementById("input-text").value = ""
+var clearButtonElement = document.getElementById("clear-comment");
+var submitButtonElement= document.getElementById("submit-comment");
+var inputElement = document.getElementById("input-text");
+
+clearButtonElement.addEventListener("click", function() {
+    inputElement.value = "";
 })
 
-var submitComment = document.getElementById("submit-comment");
-submitComment.addEventListener("click", function() {
+submitButtonElement.addEventListener("click", function() {
+    var commentSection = document.getElementById("comment-section");
+    var commentNode = document.createTextNode(inputElement.value);
 
-    var inputText = document.getElementById("input-text").value
-    var commentSection = document.getElementById("comment-section")
-    var commentNode = document.createTextNode(inputText)
-
-    commentSection.appendChild(commentNode)
-    commentSection.appendChild(document.createElement('br'));
-    document.getElementById("input-text").value = ""
+    commentSection.appendChild(commentNode);
+    commentSection.appendChild(document.createElement("br"));
+    inputElement.value = "";
 })
 
