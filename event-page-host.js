@@ -13,6 +13,5 @@ submitComment.addEventListener("click", function() {
     commentSection.appendChild(commentNode)
     commentSection.appendChild(document.createElement('br'));
     document.getElementById("input-text").value = ""
-    // inputText = ""
 })
 
