@@ -12,7 +12,7 @@
     width: 100%;
 }
 body {
-    background-color: #f7f7f7
+    background-color:#f7f7f7;
 }
 
 i {
@@ -24,5 +24,8 @@ i {
 button.join-card {
     margin:auto;
     width:100%;
-    /* height:50%; */
+}
+
+a.jumbotron {
+    color: black;
 }

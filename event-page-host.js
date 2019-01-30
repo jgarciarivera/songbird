@@ -15,3 +15,23 @@ submitButtonElement.addEventListener("click", function() {
     inputElement.value = "";
 })
 
+function addMusician() {
+    var joinName = document.getElementById('name').value
+    var joinInstrument = document.getElementById('instrument').value
+    var joinLevel = document.getElementsByName('expertiseLevel').value
+    var num = 1;
+
+    document.getElementById("join-div").innerHTML = (
+        `<div id="musician`+num+`" class="card m-1 col col-sm-3">
+            <div class="card-body">
+                <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+                <div class="card-title">`+joinName+`</div>
+                <div class="card-text">`+joinInstrument+`, `+joinLevel+`</div>
+            </div>
+        </div>
+
+        <div id = "join-div">
+        </div>
+        `
+    );
+}
