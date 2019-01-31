@@ -48,42 +48,10 @@
   </div>
 </div>
 
-<div class="mt-4 row">
 
-  <div id="card1" class="card m-1 col col-sm-3">
-      <div class="card-body">
-          <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-          <div class="card-title">Usman Siddiqui</div>
-          <div class="card-text">Piano, Novice</div>
-      </div>
-  </div>
-  <div id="card2" class="card m-1 col col-sm-3">
-      <div class="card-body">
-          <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-          <div class="card-title">Usman Siddiqui</div>
-          <div class="card-text">Piano, Novice</div>
-      </div>
-  </div>
-  <div id="card3" class="card m-1 col col-sm-3">
-      <div class="card-body">
-          <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-          <div class="card-title">Usman Siddiqui</div>
-          <div class="card-text">Piano, Novice</div>
-      </div>
-  </div>
-  
-  <div id='join-div' class = "card m-1 col col-sm-3">
-    <div class="card-body">
-        <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-        <div class="card-title">{{joinName}}</div>
-        <div class="card-text">{{joinInstrument}}, {{joinLevel}}</div>
-    </div>
-  </div>
-
-  <div *ngFor="let person of people">
-        <app-person [age] = "person.age" [name] = "person.name">
-        </app-person>
-        <button (click)="delete(person)">Delete</button>
-      </div>
-
+<div class="card-columns">
+  <div *ngFor="let person of musicians" class="card">
+    <app-musician [name]="person.name" [instrument]="person.instrument" [expertise]="person.expertise" >
+    </app-musician>
+</div>
 </div>
