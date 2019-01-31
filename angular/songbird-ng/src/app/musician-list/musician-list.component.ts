@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicianListComponent implements OnInit {
   joinName: string;
+  modalVisible: boolean = false;
+  
   constructor() { }
 
   ngOnInit() {
   }
-  modalVisible: boolean = false;
-
+  
   toggleVisible () {
     this.modalVisible = !this.modalVisible;
   }
