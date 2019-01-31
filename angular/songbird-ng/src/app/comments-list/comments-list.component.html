@@ -1,0 +1,23 @@
+<div class = "container">
+<div class=" mt-4 row">
+    <p class="display-4 mt-4">Comments</p>
+</div>
+
+<div id="comment-section" class="row">
+    <input type = "text" class = "rounded" [(ngModel)] = "name" placeholder = "Enter display name... "/>
+    <textarea rows = 5 type="text" [(ngModel)] = "comment" id="input-text" class="rounded full-width" placeholder="Enter your comment here..."></textarea>
+    
+    <div class="">
+        <button id="clear-comment" class="rounded border full-width btn btn-light">Clear</button>
+    </div>
+    <div class="">
+        <button (click) = "addComment()" id="submit-comment" class="full-width btn btn-primary ml-3">Submit</button>
+    </div>
+</div>
+
+  <div *ngFor="let entry of comments" class="">
+      <app-comments [name]="entry.name" [comment]="entry.comment" >
+      </app-comments>
+  </div>
+
+</div>

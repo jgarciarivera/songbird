@@ -1,3 +1,67 @@
-<p>
-  events-list works!
-</p>
+<div class = "container">
+    <div class="">
+        <span class="display-4" style = "padding-left:15px;">Events</span>
+    <button (click) = "toggleVisible()" type="button" class="ml-4 display-4 btn btn-primary" data-toggle="modal" data-target="#join-session">
+        Create Session
+    </button>
+    </div>
+
+
+<div class="modal" [style.display] = "modalVisible ? 'block' : 'none'" id="join-session" tabindex="-1" role="dialog" aria-labelledby="join-sessionTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modal-title">Create a session!</h5>
+              <button (click) = "toggleVisible()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <form class="form-horizontal" action=#>
+                  <div class="form-group">
+                      <label class="control-label col-sm-2" for="name" >Name:</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)] = "joinSessionName" name = "joinOnSession" class="form-control" id="name" placeholder="Enter session name"/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col-sm-2" for="date">Date:</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)] = "joinDate" name = "joinOnDate" class="form-control" id="instrument" placeholder="Enter date. mm/dd/yy"/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col-sm-2" for="time" >Time:</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)] = "joinTime" name = "joinOnTime" class="form-control" id="name" placeholder="Enter time. hh:mm am/pm to hh:mm am/pm"/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col-sm-2" for="genre" >Genre:</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)] = "joinGenre" name = "joinOnGenre" class="form-control" id="name" placeholder="Enter session genre"/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="control-label col" for="address">Address</label>
+                      <div class="col-sm-10">
+                          <input type="text" [(ngModel)] = "joinAddress" name = "joinOnAddress" class="form-control" id="expertise" placeholder="Enter address"/>   
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click) = "toggleVisible()" data-dismiss="modal">Close</button>
+              <button type="button" (click) = 'addSession()' class="btn btn-primary" data-dismiss = "modal" id='join-btn' >Add
+                  Session</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div *ngFor="let event of events" class="">
+  <app-event [name]="event.name" [date]="event.date" [time]="event.time" [genre]="event.genre" [address]="event.address"  >
+  </app-event>
+</div>
+</div>
