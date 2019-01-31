@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Person } from '../Person';
+import { dummyMusicians } from '../musicians'
 
 @Component({
   selector: 'app-musician-list',
@@ -6,14 +8,22 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./musician-list.component.css']
 })
 export class MusicianListComponent {
-  joinName: string;
+  joinName: string = "";
+  joinInstrument: string = "";
+  joinLevel: string = "";
   @Input() modalVisible: Boolean;
+  @Input() joinOnName: string;
+  @Input() joinOnInstrument: string;
+  @Input() joinOnLevel: string;
+  
+  musicians: Person[] = dummyMusicians;
   
   toggleVisible() {
     this.modalVisible = !this.modalVisible;
   }
 
-  addMusician() {
-    
-  }
+  addMusician(m: Person) {
+      this.musicians.push({ name: this.joinOnName, instrument: this.joinOnInstrument, expertise: this.joinOnLevel });
+    }
 }
+

@@ -22,52 +22,25 @@
                   <div class="form-group">
                       <label class="control-label col-sm-2" for="name" >Name:</label>
                       <div class="col-sm-10">
-                          <input type="text" [(ngModel)] = "joinName" class="form-control" id="name" placeholder="Enter your name"/>
+                          <input type="text" [(ngModel)] = "joinName" name = "joinOnName" class="form-control" id="name" placeholder="Enter your name"/>
                       </div>
                   </div>
                   <div class="form-group">
                       <label class="control-label col-sm-2" for="instrument">Instrument:</label>
                       <div class="col-sm-10">
-                          <input type="text" [(ngModel)] = "joinInstrument" class="form-control" id="instrument" placeholder="Enter your instrument"/>
+                          <input type="text" [(ngModel)] = "joinInstrument" name = "joinOnInstrument" class="form-control" id="instrument" placeholder="Enter your instrument"/>
                       </div>
                   </div>
                   <div class="form-group">
-                      <label class="control-label col-sm-2" for="expertise">Expertise:</label>
+                      <label class="control-label col" for="expertise">Expertise: (None, Novice, Intermediate, Expert)</label>
                       <div class="col-sm-10">
-                          <div class="form-check">
-                              <input class="form-check-input" type="radio" name="expertiseLevel" id="expert"
-                                  value="Expert"/>
-                              <label class="form-check-label" for="expert-radio">
-                                  Expert
-                              </label>
-                          </div>
-                          <div class="form-check">
-                              <input class="form-check-input" type="radio" name="expertiseLevel" id="intermediate"
-                                  value="Intermediate"/>
-                              <label class="form-check-label" for="inter-radio">
-                                  Intermediate
-                              </label>
-                          </div>
-                          <div class="form-check">
-                              <input class="form-check-input" type="radio" name="expertiseLevel" id="novice"
-                                  value="Novice"/>
-                              <label class="form-check-label" for="novice-radio">
-                                  Novice
-                              </label>
-                          </div>
-                          <div class="form-check">
-                              <input class="form-check-input" type="radio" name="expertiseLevel" id="none"
-                                  value="None" checked/>
-                              <label class="form-check-label" for="none-radio">
-                                  None
-                              </label>
-                          </div>
+                          <input type="text" [(ngModel)] = "joinLevel" name = "joinOnLevel" class="form-control" id="expertise" placeholder="Enter your level of expertise"/>   
                       </div>
                   </div>
               </form>
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" (click) = "toggleVisible()" data-dismiss="modal">Close</button>
               <button type="button" (click) = 'addMusician()' class="btn btn-primary" data-dismiss = "modal" id='join-btn' >Join
                   Session</button>
           </div>
@@ -98,11 +71,12 @@
           <div class="card-text">Piano, Novice</div>
       </div>
   </div>
+  
   <div id='join-div' class = "card m-1 col col-sm-3">
     <div class="card-body">
         <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
-        <div class="card-title">Join Name</div>
-        <div class="card-text">Piano, Novice</div>
+        <div class="card-title">{{joinName}}</div>
+        <div class="card-text">{{joinInstrument}}, {{joinLevel}}</div>
     </div>
   </div>
 

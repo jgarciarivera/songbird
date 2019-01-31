@@ -7,6 +7,7 @@ import { MusicianListComponent } from "./musician-list/musician-list.component";
 import { EventPageComponent } from './event-page/event-page.component';
 import { CommentsComponent } from './comments/comments.component';
 import { EventsListComponent } from './events-list/events-list.component';
+import { MusicianComponent } from './musician/musician.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EventsListComponent } from './events-list/events-list.component';
     EventPageComponent,
     CommentsComponent,
     EventsListComponent,
+    MusicianComponent,
   ],
   imports: [
     BrowserModule,
