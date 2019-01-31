@@ -80,5 +80,10 @@
     </div>
   </div>
 
+  <div *ngFor="let person of people">
+        <app-person [age] = "person.age" [name] = "person.name">
+        </app-person>
+        <button (click)="delete(person)">Delete</button>
+      </div>
 
 </div>
