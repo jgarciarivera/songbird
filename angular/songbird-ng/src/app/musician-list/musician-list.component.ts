@@ -6,9 +6,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./musician-list.component.css']
 })
 export class MusicianListComponent {
+  joinName: string;
   @Input() modalVisible: Boolean;
   
   toggleVisible() {
     this.modalVisible = !this.modalVisible;
+  }
+
+  addMusician() {
+    
   }
 }
