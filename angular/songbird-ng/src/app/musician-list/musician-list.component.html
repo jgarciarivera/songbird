@@ -20,9 +20,9 @@
           <div class="modal-body">
               <form class="form-horizontal" action=#>
                   <div class="form-group">
-                      <label class="control-label col-sm-2" for="name">Name:</label>
+                      <label class="control-label col-sm-2" for="name" >Name:</label>
                       <div class="col-sm-10">
-                          <input type="text" class="form-control" id="name" placeholder="Enter your name"/>
+                          <input type="text" class="form-control" id="name" placeholder="Enter your name" {(ngModel)}="joinName"/>
                       </div>
                   </div>
                   <div class="form-group">
@@ -68,7 +68,7 @@
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal" (click) = "toggleVisible()">Close</button>
-              <button type="button" class="btn btn-primary" data-dismiss = "modal" id='join-btn' onclick="addMusician()">Join
+              <button type="button" class="btn btn-primary" data-dismiss = "modal" id='join-btn' (click)="addMusician()">Join
                   Session</button>
           </div>
       </div>
@@ -98,8 +98,12 @@
           <div class="card-text">Piano, Novice</div>
       </div>
   </div>
-  <div id='join-div'>
-      ...
+  <div id='join-div' class = "card m-1 col col-sm-3">
+    <div class="card-body">
+        <img class="headshots" src="https://www.wasiofaces.com/wp-content/uploads/San-Diego-Orange-County-Irvine-Headshot-Photography-17-1.jpg" />
+        <div class="card-title">{{joinName}}</div>
+        <div class="card-text">Piano, Novice</div>
+    </div>
   </div>
 
 

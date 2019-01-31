@@ -6,9 +6,5 @@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  modalVisible: boolean = false;
 
-  toggleVisible () {
-    this.modalVisible = !this.modalVisible;
-  }
 }
