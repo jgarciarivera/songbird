@@ -24,6 +24,7 @@ export class MusicianListComponent {
 
   addMusician(m: Person) {
       this.musicians.push({ name: this.joinName, instrument: this.joinInstrument, expertise: this.joinLevel });
+      this.toggleVisible();
     }
 }
 

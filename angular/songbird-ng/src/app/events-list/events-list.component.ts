@@ -8,6 +8,7 @@ import { dummyEvents } from '../events';
   styleUrls: ['./events-list.component.css']
 })
 export class EventsListComponent{
+  @Input() eventID: number;
   @Input() joinSessionName: string = "";
   @Input() joinDate: string = "";
   @Input() joinTime: string = "";
@@ -21,6 +22,6 @@ export class EventsListComponent{
   events: Event[] = dummyEvents;
 
   addSession(m: Event) {
-    this.events.push({ name: this.joinSessionName, date: this.joinDate, time: this.joinTime, genre: this.joinGenre, address: this.joinAddress });
+    this.events.push({ id:this.eventID, name: this.joinSessionName, date: this.joinDate, time: this.joinTime, genre: this.joinGenre, address: this.joinAddress });
   }
 }

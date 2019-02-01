@@ -61,7 +61,7 @@
 </div>
 
 <div *ngFor="let event of events" class="">
-  <app-event [name]="event.name" [date]="event.date" [time]="event.time" [genre]="event.genre" [address]="event.address"  >
+  <app-event [id] = "event.id" [name]="event.name" [date]="event.date" [time]="event.time" [genre]="event.genre" [address]="event.address"  >
   </app-event>
 </div>
 </div>
